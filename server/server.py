@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 
 import flask
+from flask.ext.cors import CORS
+
 from flask import Flask, request
+
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/')
 def hello_world():
